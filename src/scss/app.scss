@@ -1,0 +1,6 @@
+// Import file (old way)
+// @import 'base/variables';
+// @import 'content/content';
+@use 'base';
+@use 'content';
+

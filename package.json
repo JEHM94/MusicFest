@@ -1,0 +1,29 @@
+{
+  "name": "musicfest",
+  "version": "1.0.0",
+  "description": "SASS Gulp HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JEHM94/MusicFest.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "HTML"
+  ],
+  "author": "Jesus Hamel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JEHM94/MusicFest/issues"
+  },
+  "homepage": "https://github.com/JEHM94/MusicFest#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.5"
+  }
+}
