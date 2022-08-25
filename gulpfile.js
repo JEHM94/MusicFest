@@ -8,9 +8,11 @@
 // exports.myTask = myTask;
 const {src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require('gulp-plumber');
 
 function compileCss(done){
-    src("src/scss/app.scss") // Identify the SASS file
+    src("src/scss/**/*.scss") // Identify the SASS file
+    .pipe(plumber())
     .pipe(sass()) // Compile it
     .pipe(dest("build/css")) // Save it
 
@@ -18,7 +20,7 @@ function compileCss(done){
 }
 
 function watchScssChanges(done){
-    watch("src/scss/app.scss", compileCss); // Watch for changes on app.scss then run compileCss
+    watch("src/scss/**/*.scss", compileCss); // Watch for changes on app.scss then run compileCss
 
     done();
 }
