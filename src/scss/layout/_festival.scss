@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about-fest {
+    padding: 5rem 0;
+    @include m.mediaQuery(v.$tablet){
+        @include m.grid(2, 5rem);
+    }
+}
+
+.fest-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+
+    @include m.mediaQuery(v.$tablet){
+        margin-top: 0;
+    }
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .date {
+        color: v.$colorDarkGreen;
+        font-weight: 700;
+    }
+}
