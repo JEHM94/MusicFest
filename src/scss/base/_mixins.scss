@@ -7,11 +7,24 @@
     }
 }
 
-@mixin grid($column, $gap){
+@mixin grid($column, $gap) {
     display: grid;
     grid-template-columns: repeat($column, 1fr);
     gap: $gap;
 }
+
+@mixin resetList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin addBorder {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+}
+
 // @mixin phone {
 //     @media (min-width: v.$phone) {
 //         @content;

@@ -483,3 +483,102 @@ img {
   color: #0097A7;
   font-weight: 700;
 }
+
+.lineup {
+  background-color: #0097A7;
+  padding: 5rem 0;
+}
+.lineup h3,
+.lineup p {
+  text-align: center;
+  color: #FFFFFF;
+}
+.lineup .day {
+  text-transform: uppercase;
+  margin: 5rem 0;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .stage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.stage {
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .stage {
+    margin-top: 0;
+  }
+}
+.stage .stage-name {
+  font-weight: 700;
+  color: #000000;
+}
+.stage .stage-name:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+@media (min-width: 992px) {
+  .stage:hover {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+  }
+}
+.rock .stage-name:after {
+  background-image: url("../img/icono_rock.png");
+}
+
+.edm .stage-name:after {
+  background-image: url("../img/icono_edm.png");
+}
+
+.bg-yellow {
+  background-color: #FEF46D;
+}
+.bg-yellow li:nth-child(odd) {
+  background-color: #eada02;
+}
+
+.bg-green {
+  background-color: #4CB8B3;
+}
+.bg-green li:nth-child(odd) {
+  background-color: #3b9691;
+}
+
+.schedule {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0.5rem;
+}
+.schedule li {
+  padding: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.schedule li span {
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  .schedule li:hover {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.37);
+  }
+}
