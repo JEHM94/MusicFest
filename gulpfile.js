@@ -27,12 +27,6 @@ function compileCss(done) {
     done(); // Tells gulp that the Task has reached the end of the function
 }
 
-function watchScssChanges(done) {
-    watch("src/scss/**/*.scss", compileCss); // Watch for changes on app.scss then run compileCss
-
-    done();
-}
-
 // Functions Images *********
 function convertToWebp(done) {
     const options = {
@@ -67,13 +61,30 @@ function reduceImageSize(done) {
     done();
 }
 
+// Functions JS *********
+function compileJS(done) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
+
+    done();
+}
+
+// Watcher *********
+function watchChanges(done) {
+    watch("src/scss/**/*.scss", compileCss); // Watch for changes on app.scss then run compileCss
+    watch("src/js/**/*.js", compileJS); // Watch for changes on app.js then run compileJS
+
+    done();
+}
+
 
 // Exports *********
 // Individuals
 exports.compileCss = compileCss;
-exports.watchScssChanges = watchScssChanges;
+exports.compileJS = compileJS;
+exports.watchChanges = watchChanges;
 exports.convertToWebp = convertToWebp;
 exports.convertToAvif = convertToAvif;
 exports.reduceImageSize = reduceImageSize;
 // Dev / Build
-exports.build = parallel(reduceImageSize, convertToWebp, convertToAvif, watchScssChanges);
+exports.build = parallel(reduceImageSize, convertToWebp, convertToAvif, watchChanges);
