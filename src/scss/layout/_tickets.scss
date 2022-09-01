@@ -1,0 +1,85 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tickets {
+    padding: 5rem 0;
+
+    h3 {
+        text-align: center;
+        color: v.$colorWhite;
+        margin-bottom: 2rem;
+    }
+
+    .tickets-container {
+        @include m.mediaQuery(v.$tablet) {
+            @include m.grid(2, 5rem)
+        }
+    }
+}
+
+.entry {
+    color: v.$colorBlack;
+
+    .entry-name {
+        text-align: center;
+        font-size: 2.4rem;
+        color: v.$colorWhite;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &-header,
+    &-footer {
+        padding: .5rem;
+
+        p {
+            color: v.$colorWhite;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &-header {
+        background-color: v.$colorDarkGreen;
+
+        p {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
+
+    &-body {
+        background-color: v.$colorWhite;
+
+        ul {
+            @include m.resetList;
+
+            li {
+                padding: 1rem;
+                border-bottom: 1px solid v.$colorLightGray;
+            }
+
+            @include m.mediaQuery(v.$desktop) {
+                li:hover {
+                    font-weight: 700;
+                }
+            }
+
+            :nth-child(odd) {
+                background-color: v.$colorWhite;
+            }
+        }
+    }
+
+    &-footer {
+        background-color: v.$colorPurple;
+
+        p {
+            font-size: 2.4rem;
+        }
+    }
+
+}

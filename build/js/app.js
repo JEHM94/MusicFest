@@ -3,7 +3,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function startApp() {
+    fixedNavBar();
     createGallery();
+    scrollNav();
+}
+// Navigation Bar ******
+// Fixed Nav ******
+function fixedNavBar() {
+    const bar = document.querySelector('.header');
+    const aboutFest = document.querySelector('.about-fest');
+
+    window.addEventListener('scroll', function(){
+        if(aboutFest.getBoundingClientRect().top < 0){
+            bar.classList.add('fixed-nav');
+        } else {
+            bar.classList.remove('fixed-nav');
+        }
+    });
+}
+// Scroll Navigation ******
+function scrollNav() {
+    const links = document.querySelectorAll('.main-navigation a');
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const scrollTo = e.target.attributes.href.value;
+            const section = document.querySelector(scrollTo);
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 }
 
 // Galery ******

@@ -20,9 +20,9 @@
             <h1>Rock & EDM Festival</h1>
 
             <nav class="main-navigation">
-                <a href="#">Line Up</a>
-                <a href="#">Galery</a>
-                <a href="#">Tickets</a>
+                <a href="#lineup">Line Up</a>
+                <a href="#gallery">Galery</a>
+                <a href="#tickets">Tickets</a>
             </nav>
         </div>
 
@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section class="lineup">
+    <section id="lineup" class="lineup">
         <h3>Line Up</h3>
         <p class="day">Friday 16th</p>
 
@@ -172,13 +172,61 @@
         </div> <!-- .stage container -->
     </section> <!-- .lineup -->
 
-    <section class="gallery container">
+    <section id="gallery" class="gallery container">
         <h3>Gallery</h3>
 
         <ul class="gallery-images">
-            
         </ul>
-    </section>
+    </section> <!-- .gallery -->
+
+    <section id="tickets" class="tickets bg-green">
+        <h3>Tickets</h3>
+
+        <div class="container tickets-container">
+            <div class="basic entry">
+                <p class="entry-name"><span>1 Day</span> Entry</p>
+                <header class="entry-header">
+                    <p>Includes</p>
+                </header>
+
+                <div class="entry-body">
+                    <ul>
+                        <li>Access to Rock & EDM Stages</li>
+                        <li>Food & Drink</li>
+                    </ul>
+                </div><!-- .entry-body -->
+
+                <footer class="entry-footer">
+                    <p>$100</p>
+                </footer>
+            </div> <!-- .basic -->
+
+            <div class="premium entry">
+                <p class="entry-name"><span>2 Days</span> Entry</p>
+
+                <header class="entry-header">
+                    <p>Includes</p>
+                </header>
+
+                <div class="entry-body">
+                    <ul>
+                        <li>Access to Rock & EDM Stages</li>
+                        <li>Food & Drink</li>
+                        <li>Custom Event T-Shirt</li>
+                        <li>VIP Access</li>
+                    </ul>
+                </div><!-- .entry-body -->
+
+                <footer class="entry-footer">
+                    <p>$180</p>
+                </footer>
+            </div> <!-- .premium -->
+        </div>
+    </section><!-- .tickets -->
+
+    <footer class="site-footer">
+        <p>Rock & EDM Festival. All rights reserved - 2022</p>
+    </footer>
 
     <script src="build/js/app.js"></script>
 </body>
