@@ -12,12 +12,15 @@ function startApp() {
 function fixedNavBar() {
     const bar = document.querySelector('.header');
     const aboutFest = document.querySelector('.about-fest');
+    const body = document.querySelector('body');
 
     window.addEventListener('scroll', function(){
         if(aboutFest.getBoundingClientRect().top < 0){
             bar.classList.add('fixed-nav');
+            body.classList.add('body-scroll');
         } else {
             bar.classList.remove('fixed-nav');
+            body.classList.remove('body-scroll');
         }
     });
 }

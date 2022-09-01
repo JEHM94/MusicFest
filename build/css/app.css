@@ -326,6 +326,14 @@ body {
 body.fix-body {
   overflow: hidden;
 }
+body.body-scroll {
+  padding-top: 19rem;
+}
+@media (min-width: 768px) {
+  body.body-scroll {
+    padding-top: 7.45rem;
+  }
+}
 
 p {
   font-size: 2rem;
@@ -374,6 +382,8 @@ img {
 .header.fixed-nav {
   position: fixed;
   width: 100%;
+  left: 0;
+  top: 0;
 }
 .header.fixed-nav .main-navigation {
   display: flex;

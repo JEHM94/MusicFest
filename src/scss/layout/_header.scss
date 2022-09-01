@@ -7,6 +7,8 @@
     &.fixed-nav {
         position: fixed;
         width: 100%;
+        left: 0;
+        top: 0;
 
         .main-navigation {
             display: flex;
@@ -24,7 +26,8 @@
             position: fixed;
             width: 100%;
             box-shadow: .1rem .2rem .3rem #333;
-            h1{
+
+            h1 {
                 display: initial;
             }
         }
